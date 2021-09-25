@@ -2,6 +2,7 @@ type User {
   _id: ID!
   firstName: String!
   lastName: String!
+  fullname: String!
   email: String
   active: Boolean!
 }
@@ -21,5 +22,5 @@ type Query {
 type Mutation {
   createUser(data: UserInput!): User!
   updateUser(id: ID, data: UserInput!): User!
-  deleteUSer(id: ID!): Boolean
+  deleteUser(id: ID!): Boolean
 }

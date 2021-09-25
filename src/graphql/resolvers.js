@@ -8,5 +8,4 @@ const resolversArray = loadFilesSync(
 
 const mergeTypes = mergeResolvers(resolversArray);
 
-console.log(mergeTypes);
 export default mergeTypes;

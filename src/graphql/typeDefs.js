@@ -7,5 +7,5 @@ const typesArray = loadFilesSync(
 );
 
 const mergeArray = mergeTypeDefs(typesArray);
-console.log(mergeArray);
+
 export default mergeArray;
