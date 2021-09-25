@@ -15,7 +15,7 @@ export default {
     createPost: async (_, { data }) => await Post.create(data),
 
     updatePost: async (_, { id, data }) =>
-      Post.findOneAndUpdate(id, data, { new: true }),
+      await Post.findOneAndUpdate(id, data, { new: true }),
 
     deletePost: async (_, { id }) => {
       const deleted = await Post.findOneAndDelete(id);
