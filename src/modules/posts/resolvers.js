@@ -3,18 +3,18 @@ import User from '../../models/User';
 
 export default {
   Post: {
-    author: (post) => User.findById(post.author),
+    author: async (post) => await User.findById(post.author),
   },
 
   Query: {
-    posts: () => Post.find(),
-    post: (_, { id }) => Post.findById(id),
+    posts: async () => await Post.find(),
+    post: async (_, { id }) => await Post.findById(id),
   },
 
   Mutation: {
-    createPost: (_, { data }) => Post.create(data),
+    createPost: async (_, { data }) => await Post.create(data),
 
-    updatePost: (_, { id, data }) =>
+    updatePost: async (_, { id, data }) =>
       Post.findOneAndUpdate(id, data, { new: true }),
 
     deletePost: async (_, { id }) => {

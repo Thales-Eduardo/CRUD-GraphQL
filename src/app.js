@@ -1,9 +1,8 @@
 import { ApolloServer } from 'apollo-server';
 import mongoose from 'mongoose';
-
 export function startApolo({ typeDefs, resolvers }) {
   mongoose
-    .connect('mongodb://mongo_db:27017/crude_graphql', {
+    .connect('mongodb://mongo_db:27017/crud-graphql', {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
